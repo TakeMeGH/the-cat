@@ -121,18 +121,216 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GirlSample_Walk_Right_0
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 609
+        width: 29
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df41c5298033dd345bddd23a310353d8
+      internalID: 1728345883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Right_1
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 609
+        width: 30
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f77c2eade524a48be37fa344973190
+      internalID: 437699229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Right_2
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 609
+        width: 53
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ffaeb0d7355a3048933b424b8ca9bc1
+      internalID: -1961883371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Right_3
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 610
+        width: 58
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dbe6889df09cf14dba53832ce879660
+      internalID: -1785077235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Right_4
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 356
+        width: 42
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc2b2e6559472f4bbe4ad3a9b6f9258
+      internalID: 336062800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Right_5
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 354
+        width: 30
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9097b2eed74e64c89450ea9241ef37
+      internalID: 1468489529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Right_6
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 354
+        width: 42
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5645938c548fb34b966b615070fe82f
+      internalID: -1969565627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Right_7
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 355
+        width: 58
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e74db59093040b479351f73d990eadf
+      internalID: -2012938389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Right_8
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 97
+        width: 53
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f27eaaacc6c914dbc8dc42cee60753
+      internalID: -1201192182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 42cc29f9ae95e3d4d9574dee19d38966
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GirlSample_Walk_Right_0: 1728345883
+      GirlSample_Walk_Right_1: 437699229
+      GirlSample_Walk_Right_2: -1961883371
+      GirlSample_Walk_Right_3: -1785077235
+      GirlSample_Walk_Right_4: 336062800
+      GirlSample_Walk_Right_5: 1468489529
+      GirlSample_Walk_Right_6: -1969565627
+      GirlSample_Walk_Right_7: -2012938389
+      GirlSample_Walk_Right_8: -1201192182
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

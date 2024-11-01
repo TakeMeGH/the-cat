@@ -121,18 +121,216 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GirlSample_Walk_Up_0
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 611
+        width: 41
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e95cb3598a0ca4f9c35ac949c44f40
+      internalID: 177804308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Up_1
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 608
+        width: 41
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817c0e95e0f7dbf49a4a44378f58e73c
+      internalID: 1613191251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Up_2
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 604
+        width: 39
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906037ea99947c54696066cd14078289
+      internalID: -1207900765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Up_3
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 601
+        width: 39
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7615ca72a821f904c92f78b25cb45d29
+      internalID: -500103512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Up_4
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 347
+        width: 38
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086c85b8cc373804e9d6c85345bd128d
+      internalID: -1280736242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Up_5
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 354
+        width: 38
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb6d2ef7e6ee8049adcd6f194631e54
+      internalID: 1471797723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Up_6
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 348
+        width: 39
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4939661be1bd7ba458e9cff023a86844
+      internalID: 131202009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Up_7
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 345
+        width: 39
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb6b696fa8839746a6cd34e141b115e
+      internalID: -1157056743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlSample_Walk_Up_8
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 90
+        width: 39
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53f65bc923e5e2459d532eda6933892
+      internalID: -145897772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 55a42de2f168755428806b4e8ba73faa
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GirlSample_Walk_Up_0: 177804308
+      GirlSample_Walk_Up_1: 1613191251
+      GirlSample_Walk_Up_2: -1207900765
+      GirlSample_Walk_Up_3: -500103512
+      GirlSample_Walk_Up_4: -1280736242
+      GirlSample_Walk_Up_5: 1471797723
+      GirlSample_Walk_Up_6: 131202009
+      GirlSample_Walk_Up_7: -1157056743
+      GirlSample_Walk_Up_8: -145897772
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

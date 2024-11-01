@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9ad9edd5a7e617a44a899b59ca11b830
+guid: 060f21cbce7cf8140bf710aa28757bcc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,190 +123,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GirlSample_Walk_Down_0
+      name: free version_0
       rect:
         serializedVersion: 2
-        x: 109
-        y: 608
-        width: 41
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 49
+        width: 90
+        height: 95
+      alignment: 3
+      pivot: {x: 1, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25e3816d9fa744a4ca23cb6b49be656b
-      internalID: 1122702283
+      spriteID: 1856e9b9819a280478db04fb64134e63
+      internalID: 1263168088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GirlSample_Walk_Down_1
+      name: free version_1
       rect:
         serializedVersion: 2
-        x: 364
-        y: 607
-        width: 41
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 80
+        width: 64
+        height: 64
+      alignment: 3
+      pivot: {x: 1, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82223ae71a4d86646a652f1aa8e2aa14
-      internalID: 1161574173
+      spriteID: 0bbc08e7bb4bbf84fa6079e14c269fcc
+      internalID: -853303644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GirlSample_Walk_Down_2
+      name: free version_2
       rect:
         serializedVersion: 2
-        x: 619
-        y: 603
-        width: 40
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 16
+        width: 64
+        height: 64
+      alignment: 3
+      pivot: {x: 1, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e50523b8b7e17ba4aac125354a4bd85c
-      internalID: 1178811699
+      spriteID: 32a52e00a79dff7488e1279177fba3e7
+      internalID: 530531370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GirlSample_Walk_Down_3
+      name: free version_3
       rect:
         serializedVersion: 2
-        x: 876
-        y: 601
-        width: 39
-        height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 16
+        width: 64
+        height: 64
+      alignment: 3
+      pivot: {x: 1, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13074634bb1bd3d48bf5cdf06c7fcbe7
-      internalID: -552966280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GirlSample_Walk_Down_4
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 348
-        width: 38
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8dd680248a19c9f49aa0797f15e0346c
-      internalID: -1292988236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GirlSample_Walk_Down_5
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 353
-        width: 38
-        height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8aede317296c5048be71209b15992ed
-      internalID: 350258215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GirlSample_Walk_Down_6
-      rect:
-        serializedVersion: 2
-        x: 624
-        y: 348
-        width: 39
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10164dec6eb043d458fae3fd66850808
-      internalID: -1223515900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GirlSample_Walk_Down_7
-      rect:
-        serializedVersion: 2
-        x: 880
-        y: 346
-        width: 39
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 611e6fe0aa0f0444e88a2f2f37c45438
-      internalID: 1589611985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GirlSample_Walk_Down_8
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 89
-        width: 39
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 126c84998b0a2f2419cfd80c6ea3482f
-      internalID: -1498024858
+      spriteID: 75595e4f786aee04a96f41a88b35cadf
+      internalID: -2110071530
       vertices: []
       indices: 
       edges: []
@@ -314,7 +209,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 117730cb5652bfa42835bc4a7bc376bf
+    spriteID: 38914f47972db0d45be1c986064e6523
     internalID: 0
     vertices: []
     indices: 
@@ -322,15 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GirlSample_Walk_Down_0: 1122702283
-      GirlSample_Walk_Down_1: 1161574173
-      GirlSample_Walk_Down_2: 1178811699
-      GirlSample_Walk_Down_3: -552966280
-      GirlSample_Walk_Down_4: -1292988236
-      GirlSample_Walk_Down_5: 350258215
-      GirlSample_Walk_Down_6: -1223515900
-      GirlSample_Walk_Down_7: 1589611985
-      GirlSample_Walk_Down_8: -1498024858
+      free version_0: 1263168088
+      free version_1: -853303644
+      free version_2: 530531370
+      free version_3: -2110071530
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
