@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace TC
@@ -13,9 +14,13 @@ namespace TC
         [field: SerializeField] public float MaxJumpAmmount;
         [field: SerializeField] public float FallMultiplier;
         [field: SerializeField] public float MaxFallSpeed;
+        [field: SerializeField] public float FallingThreshold;
+
         #region Component
         [field: Header("Component")]
         [field: SerializeField] public GroundDetector GroundDetector;
+        [field: SerializeField] public AnimationEventTrigger AnimationEventTrigger;
+        [field: SerializeField] public InteractionManager InteractionManager;
         public Rigidbody Rigidbody { get; private set; }
         public Animator Animator { get; private set; }
         public SpriteRenderer SpriteRenderer { get; private set; }
@@ -31,6 +36,8 @@ namespace TC
         public MCWalkingState MCWalkingState { get; private set; }
         public MCJumpingState MCJumpingState { get; private set; }
         public MCFallingState MCFallingState { get; private set; }
+        public MCInteractingState MCInteractingState { get; private set; }
+
         #endregion
 
         void OnEnable()
@@ -54,6 +61,7 @@ namespace TC
             MCWalkingState = new MCWalkingState(this);
             MCJumpingState = new MCJumpingState(this);
             MCFallingState = new MCFallingState(this);
+            MCInteractingState = new MCInteractingState(this);
 
         }
         void Start()

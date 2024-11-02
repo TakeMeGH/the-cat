@@ -11,6 +11,8 @@ namespace TC
     {
         public Action<Vector2> MoveEvent;
         public Action JumpEvent;
+        public Action InteractEvent;
+
 
         MCInput _MCInput;
         void OnEnable()
@@ -26,7 +28,7 @@ namespace TC
 
         void OnDisable()
         {
-            if(_MCInput != null) _MCInput.Gameplay.Disable();
+            if (_MCInput != null) _MCInput.Gameplay.Disable();
         }
         public void OnJump(InputAction.CallbackContext context)
         {
@@ -39,6 +41,14 @@ namespace TC
         public void OnMovement(InputAction.CallbackContext context)
         {
             MoveEvent?.Invoke(context.ReadValue<Vector2>());
+        }
+
+        public void OnInteract(InputAction.CallbackContext context)
+        {
+            if (context.phase == InputActionPhase.Performed)
+            {
+                InteractEvent?.Invoke();
+            }
         }
     }
 }

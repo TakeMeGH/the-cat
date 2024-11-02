@@ -21,6 +21,7 @@ namespace TC
         {
             HandleAnimation();
             _MCController.InputReader.JumpEvent += OnJump;
+            _MCController.InputReader.InteractEvent += OnInteract;
 
         }
 
@@ -28,12 +29,15 @@ namespace TC
         {
             _lastAnimation = "";
             _MCController.InputReader.JumpEvent -= OnJump;
+            _MCController.InputReader.InteractEvent -= OnInteract;
+
         }
 
         public void PhysicsUpdate()
         {
             HandleAnimation();
             HandleMove();
+            CheckFalling();
         }
 
         public void Update()
@@ -113,6 +117,23 @@ namespace TC
         {
             _MCController.SwitchState(_MCController.MCJumpingState);
         }
+
+        void CheckFalling()
+        {
+            if (_MCController.Rigidbody.velocity.y < _MCController.FallingThreshold)
+            {
+                _MCController.SwitchState(_MCController.MCFallingState);
+            }
+        }
+
+        void OnInteract()
+        {
+            if (_MCController.InteractionManager.IsCanInteract())
+            {
+                _MCController.SwitchState(_MCController.MCInteractingState);
+            }
+        }
+
 
     }
 }

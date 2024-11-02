@@ -43,6 +43,7 @@ namespace TC
 
         public void Jump()
         {
+            _MCController.Rigidbody.velocity = Vector3.zero;
             _MCController.Rigidbody.AddForce(new Vector3(_MCController.MoveDirection.x, _MCController.JumpForce, _MCController.MoveDirection.y), ForceMode.VelocityChange);
             _MCController.CurrentJumpAmount++;
         }
