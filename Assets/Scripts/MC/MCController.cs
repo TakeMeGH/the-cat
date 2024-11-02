@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 namespace TC
@@ -13,10 +10,9 @@ namespace TC
         [field: SerializeField] public float Speed;
         [field: SerializeField] public float JumpForce;
         [field: SerializeField] public float JumpBufferTime;
+        [field: SerializeField] public float MaxJumpAmmount;
         [field: SerializeField] public float FallMultiplier;
         [field: SerializeField] public float MaxFallSpeed;
-
-
         #region Component
         [field: Header("Component")]
         [field: SerializeField] public GroundDetector GroundDetector;
@@ -25,6 +21,8 @@ namespace TC
         public SpriteRenderer SpriteRenderer { get; private set; }
         #endregion
         #region SharedData
+        [field: Header("Read Only")]
+        public int CurrentJumpAmount;
         public Vector2 MoveDirection { get; private set; }
         #endregion
 

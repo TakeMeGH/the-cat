@@ -16,11 +16,15 @@ namespace TC
         public void Enter()
         {
             _MCController.Animator.Play(ANIMATION_NAME);
+            _MCController.InputReader.JumpEvent += OnJump;
+
+            _MCController.Rigidbody.velocity = Vector2.zero;
             Jump();
         }
 
         public void Exit()
         {
+            _MCController.InputReader.JumpEvent -= OnJump;
         }
 
         public void PhysicsUpdate()
@@ -39,7 +43,8 @@ namespace TC
 
         public void Jump()
         {
-            _MCController.Rigidbody.AddForce(new Vector3(0, _MCController.JumpForce, 0), ForceMode.VelocityChange);
+            _MCController.Rigidbody.AddForce(new Vector3(_MCController.MoveDirection.x, _MCController.JumpForce, _MCController.MoveDirection.y), ForceMode.VelocityChange);
+            _MCController.CurrentJumpAmount++;
         }
 
         Vector3 GetPlayerVerticalVelocity()
@@ -53,6 +58,13 @@ namespace TC
             return GetPlayerVerticalVelocity().y > minimumVelocity;
         }
 
+        void OnJump()
+        {
+            if (_MCController.CurrentJumpAmount < _MCController.MaxJumpAmmount)
+            {
+                Jump();
+            }
+        }
 
     }
 }

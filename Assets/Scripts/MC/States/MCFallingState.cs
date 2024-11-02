@@ -9,6 +9,8 @@ namespace TC
         protected MCController _MCController;
         const string ANIMATION_NAME = "MC_Fall";
 
+        float _jumpButtonTime = -1;
+
         public MCFallingState(MCController _MCController)
         {
             this._MCController = _MCController;
@@ -18,12 +20,15 @@ namespace TC
         {
             _MCController.Animator.Play(ANIMATION_NAME);
             _MCController.GroundDetector.OnGroundDetected += OnGroundDetected;
+            _MCController.InputReader.JumpEvent += OnJump;
 
         }
 
         public void Exit()
         {
             _MCController.GroundDetector.OnGroundDetected -= OnGroundDetected;
+            _MCController.InputReader.JumpEvent -= OnJump;
+            _jumpButtonTime = -1;
 
         }
 
@@ -48,9 +53,28 @@ namespace TC
 
         void OnGroundDetected()
         {
+            if (_jumpButtonTime + _MCController.JumpBufferTime >= Time.time)
+            {
+                _MCController.SwitchState(_MCController.MCJumpingState);
+                return;
+            }
+
+            _MCController.CurrentJumpAmount = 0;
             _MCController.SwitchState(_MCController.MCIdlingState);
         }
 
+        void OnJump()
+        {
+            if (_MCController.CurrentJumpAmount < _MCController.MaxJumpAmmount)
+            {
+                _MCController.SwitchState(_MCController.MCJumpingState);
+            }
+            else
+            {
+                _jumpButtonTime = Time.time;
+            }
+
+        }
 
     }
 }
