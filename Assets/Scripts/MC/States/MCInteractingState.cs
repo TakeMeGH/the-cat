@@ -9,7 +9,7 @@ namespace TC
         protected MCController _MCController;
         const string ANIMATION_NAME = "MC_Interact";
 
-        float _jumpButtonTime = -1;
+        bool _allowMove = false;
 
         public MCInteractingState(MCController _MCController)
         {
@@ -27,12 +27,12 @@ namespace TC
         {
             _MCController.AnimationEventTrigger.TriggerOnMovementStateAnimationExitEvent.RemoveListener(OnAnimationEnd);
             _MCController.AnimationEventTrigger.TriggerOnMovementStateAnimationTransitionEvent.RemoveListener(InteractObject);
-
+            _allowMove = false;
         }
 
         public void PhysicsUpdate()
         {
-            if (_MCController.MoveDirection != Vector2.zero)
+            if (_allowMove && _MCController.MoveDirection != Vector2.zero)
             {
                 _MCController.SwitchState(_MCController.MCWalkingState);
                 return;
@@ -51,6 +51,7 @@ namespace TC
         void InteractObject()
         {
             _MCController.InteractionManager.OnInteractionButtonPress();
+            _allowMove = true;
         }
 
     }

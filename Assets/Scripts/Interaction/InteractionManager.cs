@@ -45,6 +45,7 @@ namespace TC
                 return;
             }
             _currentInteraction.Interact();
+            RemovePotentialInteraction(_currentInteraction.gameObject);
 
         }
         public void OnTriggerChangeDetected(bool entered, GameObject obj)
