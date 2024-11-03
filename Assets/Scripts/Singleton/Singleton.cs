@@ -8,6 +8,11 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         get
         {
+            if (applicationIsQuitting)
+            {
+                return null;
+            }
+
             if (_instance == null)
             {
                 _instance = FindObjectOfType<T>();
@@ -35,4 +40,10 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private static bool applicationIsQuitting = false;
+    public void OnDestroy()
+    {
+        applicationIsQuitting = true;
+    }
+
 }

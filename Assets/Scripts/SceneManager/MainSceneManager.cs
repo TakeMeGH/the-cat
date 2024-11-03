@@ -1,10 +1,14 @@
-using System;
+using Cinemachine;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+
 
 namespace TC
 {
     public class MainSceneManager : MonoBehaviour
     {
+        [field: Header("Player")]
         [SerializeField] Transform _plyerStart;
         [SerializeField] GameObject _player;
         [SerializeField] VoidEvent _respawnEvent;
@@ -16,17 +20,24 @@ namespace TC
         [SerializeField] GameObject GameOverMenu;
         GameObject _selectedMenu = null;
 
+        [field: Header("Last Level")]
+        [SerializeField] VoidEvent _onLastLevel;
+        [SerializeField] CinemachineVirtualCamera _virtualCamera;
+        [SerializeField] Volume _postProcessVolume;
+        [SerializeField] MCController _MCController;
+
 
         void OnEnable()
         {
             _respawnEvent.EventAction += OnRespawn;
             _gameoverEvent.EventAction += OnGameOver;
+            _onLastLevel.EventAction += OnLastLevel;
         }
-
         void OnDisable()
         {
             _respawnEvent.EventAction -= OnRespawn;
             _gameoverEvent.EventAction -= OnGameOver;
+            _onLastLevel.EventAction -= OnLastLevel;
 
         }
 
@@ -68,6 +79,26 @@ namespace TC
                 _selectedMenu = null;
             }
         }
+
+        void OnLastLevel()
+        {
+            _virtualCamera.m_Lens.FieldOfView = 25;
+
+            var noise = _virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+            noise.m_AmplitudeGain = 3f;
+            noise.m_FrequencyGain = 0.37f;
+
+            Vignette vignette;
+
+            if (_postProcessVolume.profile.TryGet(out vignette))
+            {
+                vignette.active = true;
+            }
+
+            _MCController.IsUsingDelay = true;
+
+        }
+
 
     }
 }

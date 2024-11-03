@@ -9,12 +9,18 @@ namespace TC
         [field: SerializeField] public InputReader InputReader;
         [field: Header("Movement Data")]
         [field: SerializeField] public float Speed;
+        [field: SerializeField] public float SlowSpeed;
+
         [field: SerializeField] public float JumpForce;
         [field: SerializeField] public float JumpBufferTime;
         [field: SerializeField] public float MaxJumpAmmount;
         [field: SerializeField] public float FallMultiplier;
         [field: SerializeField] public float MaxFallSpeed;
         [field: SerializeField] public float FallingThreshold;
+        [field: SerializeField] public bool IsUsingDelay;
+        [field: SerializeField] public float WalkDelay;
+        [field: SerializeField] public float WalkDelayIntervalCompensation;
+
 
         #region Component
         [field: Header("Component")]

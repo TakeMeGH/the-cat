@@ -16,8 +16,11 @@ namespace TC
 
         void OnDisable()
         {
-            DataManager.Instance.OnTowelStatusChange -= SetWallStatus;
-            DataManager.Instance.OnWaterStatusChange -= SetWallStatus;
+            if (DataManager.Instance != null)
+            {
+                DataManager.Instance.OnTowelStatusChange -= SetWallStatus;
+                DataManager.Instance.OnWaterStatusChange -= SetWallStatus;
+            }
         }
 
         void SetWallStatus()

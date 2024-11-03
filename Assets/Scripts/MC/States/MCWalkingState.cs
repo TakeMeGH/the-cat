@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace TC
@@ -8,9 +9,12 @@ namespace TC
     {
         protected MCController _MCController;
         const string RIGHT_ANIMATION_NAME = "MC_WalkRight";
+        const string IDLE_ANIMATION_NAME = "MC_Idle";
+
         const string UP_ANIMATION_NAME = "MC_WalkUp";
         const string DOWN_ANIMATION_NAME = "MC_WalkDown";
-
+        float _lastMove;
+        float _delayTime;
         string _lastAnimation = "";
         public MCWalkingState(MCController _MCController)
         {
@@ -19,9 +23,26 @@ namespace TC
 
         public void Enter()
         {
-            HandleAnimation();
             _MCController.InputReader.JumpEvent += OnJump;
             _MCController.InputReader.InteractEvent += OnInteract;
+
+            if (_MCController.IsUsingDelay)
+            {
+                if (Time.time - _lastMove <= _MCController.WalkDelayIntervalCompensation)
+                {
+                    _delayTime = 0;
+                }
+                else
+                {
+                    _delayTime = _MCController.WalkDelay;
+                }
+                _lastAnimation = IDLE_ANIMATION_NAME;
+                _MCController.Animator.Play(IDLE_ANIMATION_NAME);
+            }
+            else
+            {
+                HandleAnimation();
+            }
 
         }
 
@@ -30,11 +51,14 @@ namespace TC
             _lastAnimation = "";
             _MCController.InputReader.JumpEvent -= OnJump;
             _MCController.InputReader.InteractEvent -= OnInteract;
+            _lastMove = Time.time;
 
         }
 
         public void PhysicsUpdate()
         {
+            _delayTime -= Time.deltaTime;
+            if (_MCController.IsUsingDelay && _delayTime > 0) return;
             HandleAnimation();
             HandleMove();
             CheckFalling();
