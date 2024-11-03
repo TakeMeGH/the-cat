@@ -34,13 +34,14 @@ namespace TC
         {
             _duration = duration;
             _currentTime = Time.time;
-            ShowSprite();
+            ShowSprite(sprite);
         }
 
-        void ShowSprite()
+        void ShowSprite(Sprite sprite)
         {
             _bubbleSprite.enabled = true;
             _iconSprite.enabled = true;
+            _iconSprite.sprite = sprite;
             _showing = true;
         }
 
