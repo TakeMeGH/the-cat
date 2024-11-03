@@ -53,8 +53,12 @@ namespace TC
 
         void OnGroundDetected()
         {
+            _MCController.Rigidbody.velocity = new Vector3(_MCController.Rigidbody.velocity.x,
+            0, _MCController.Rigidbody.velocity.z);
+            
             if (_jumpButtonTime + _MCController.JumpBufferTime >= Time.time)
             {
+                _MCController.CurrentJumpAmount = 0;
                 _MCController.SwitchState(_MCController.MCJumpingState);
                 return;
             }

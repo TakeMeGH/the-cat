@@ -9,9 +9,10 @@ namespace TC
     {
         public Action OnGroundDetected;
 
-        private void OnCollisionEnter(Collision other)
+        private void OnTriggerEnter(Collider other)
         {
             OnGroundDetected?.Invoke();
         }
+
     }
 }

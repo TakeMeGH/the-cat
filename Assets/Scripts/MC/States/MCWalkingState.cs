@@ -21,6 +21,7 @@ namespace TC
         {
             HandleAnimation();
             _MCController.InputReader.JumpEvent += OnJump;
+            _MCController.InputReader.InteractEvent += OnInteract;
 
         }
 
@@ -28,12 +29,15 @@ namespace TC
         {
             _lastAnimation = "";
             _MCController.InputReader.JumpEvent -= OnJump;
+            _MCController.InputReader.InteractEvent -= OnInteract;
+
         }
 
         public void PhysicsUpdate()
         {
             HandleAnimation();
             HandleMove();
+            CheckFalling();
         }
 
         public void Update()
@@ -42,7 +46,7 @@ namespace TC
 
         void HandleAnimation()
         {
-            if (_MCController.MoveDirection.x > 0f)
+            if (_MCController.MoveDirection.x > 0f || (_MCController.MoveDirection.x == 0 && _MCController.MoveDirection.y != 0))
             {
                 _MCController.SpriteRenderer.flipX = false;
                 if (_lastAnimation != RIGHT_ANIMATION_NAME)
@@ -60,24 +64,24 @@ namespace TC
                     _MCController.Animator.Play(RIGHT_ANIMATION_NAME);
                 }
             }
-            else if (_MCController.MoveDirection.y > 0)
-            {
-                _MCController.SpriteRenderer.flipX = false;
-                if (_lastAnimation != UP_ANIMATION_NAME)
-                {
-                    _lastAnimation = UP_ANIMATION_NAME;
-                    _MCController.Animator.Play(UP_ANIMATION_NAME);
-                }
-            }
-            else if (_MCController.MoveDirection.y < 0)
-            {
-                _MCController.SpriteRenderer.flipX = false;
-                if (_lastAnimation != DOWN_ANIMATION_NAME)
-                {
-                    _lastAnimation = DOWN_ANIMATION_NAME;
-                    _MCController.Animator.Play(DOWN_ANIMATION_NAME);
-                }
-            }
+            // else if (_MCController.MoveDirection.y > 0)
+            // {
+            //     _MCController.SpriteRenderer.flipX = false;
+            //     if (_lastAnimation != UP_ANIMATION_NAME)
+            //     {
+            //         _lastAnimation = UP_ANIMATION_NAME;
+            //         _MCController.Animator.Play(UP_ANIMATION_NAME);
+            //     }
+            // }
+            // else if (_MCController.MoveDirection.y < 0)
+            // {
+            //     _MCController.SpriteRenderer.flipX = false;
+            //     if (_lastAnimation != DOWN_ANIMATION_NAME)
+            //     {
+            //         _lastAnimation = DOWN_ANIMATION_NAME;
+            //         _MCController.Animator.Play(DOWN_ANIMATION_NAME);
+            //     }
+            // }
             else
             {
                 _MCController.SwitchState(_MCController.MCIdlingState);
@@ -113,6 +117,23 @@ namespace TC
         {
             _MCController.SwitchState(_MCController.MCJumpingState);
         }
+
+        void CheckFalling()
+        {
+            if (_MCController.Rigidbody.velocity.y < _MCController.FallingThreshold)
+            {
+                _MCController.SwitchState(_MCController.MCFallingState);
+            }
+        }
+
+        void OnInteract()
+        {
+            if (_MCController.InteractionManager.IsCanInteract())
+            {
+                _MCController.SwitchState(_MCController.MCInteractingState);
+            }
+        }
+
 
     }
 }
