@@ -69,7 +69,7 @@ namespace TC
                 float t = _elapsedTime / _transitionDuration;
 
                 _virtualCamera.m_Lens.FieldOfView = Mathf.Lerp(_initialFieldOfView, _targetFieldOfView, t);
-
+                
                 if (_elapsedTime >= _transitionDuration)
                 {
                     _virtualCamera.m_Lens.FieldOfView = _targetFieldOfView;
@@ -120,7 +120,6 @@ namespace TC
             _elapsedTime = 0f;
             _isTransitioningFOV = true;
             _targetFieldOfView = 25;
-            // _virtualCamera.m_Lens.FieldOfView = 25;
 
             var noise = _virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
             noise.m_AmplitudeGain = 3f;
