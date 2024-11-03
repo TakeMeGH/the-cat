@@ -26,13 +26,18 @@ namespace TC
 
         [field: Header("Last Level")]
         [SerializeField] VoidEvent _onLastLevel;
+        [SerializeField] VoidEvent _onAlarm;
         [SerializeField] VoidEvent _onFinishGame;
         [SerializeField] CinemachineVirtualCamera _virtualCamera;
         [SerializeField] Volume _postProcessVolume;
         [SerializeField] MCController _MCController;
         [SerializeField] DoorManager _lastDoor;
+        [SerializeField] DoorManager _lastDoor2;
+
+        [SerializeField] GameObject _playerStart;
+        [SerializeField] Transform _newPlayerStartLocation;
         [SerializeField] string _nextScene;
-        [SerializeField] GameObject _HUD;
+        [SerializeField] CanvasGroup _HUD;
         [SerializeField] Image _blackScreen;
         [SerializeField] float _transitionDuration = 1f;
         float _initialFieldOfView;
@@ -46,6 +51,7 @@ namespace TC
             _gameoverEvent.EventAction += OnGameOver;
             _onLastLevel.EventAction += OnLastLevel;
             _onFinishGame.EventAction += OnFinishGame;
+            _onAlarm.EventAction += OnAlarm;
         }
         void OnDisable()
         {
@@ -53,11 +59,14 @@ namespace TC
             _gameoverEvent.EventAction -= OnGameOver;
             _onLastLevel.EventAction -= OnLastLevel;
             _onFinishGame.EventAction -= OnFinishGame;
+            _onAlarm.EventAction -= OnAlarm;
+
         }
 
         void Start()
         {
             _inputReader.EnableGameplayInput();
+            AudioManager.Instance.PlayBGM(GeneraBGM.InGame);
         }
 
         void Update()
@@ -69,7 +78,7 @@ namespace TC
                 float t = _elapsedTime / _transitionDuration;
 
                 _virtualCamera.m_Lens.FieldOfView = Mathf.Lerp(_initialFieldOfView, _targetFieldOfView, t);
-                
+
                 if (_elapsedTime >= _transitionDuration)
                 {
                     _virtualCamera.m_Lens.FieldOfView = _targetFieldOfView;
@@ -92,6 +101,7 @@ namespace TC
                 ClosePauseMenu();
             }
 
+            _HUD.alpha = 0;
             _selectedMenu = GameOverMenu;
             _selectedMenu.GetComponent<GameOverController>().OpenGameOver();
         }
@@ -101,6 +111,7 @@ namespace TC
             if (_selectedMenu == null)
             {
                 _selectedMenu = PauseMenu;
+                _HUD.alpha = 0;
                 _selectedMenu.GetComponent<PauseController>().PausePressed();
             }
         }
@@ -111,11 +122,14 @@ namespace TC
             {
                 _selectedMenu.GetComponent<PauseController>().PausePressed();
                 _selectedMenu = null;
+                _HUD.alpha = 1;
             }
         }
 
         void OnLastLevel()
         {
+            AudioManager.Instance.PlayBGM(GeneraBGM.NRoom);
+
             _initialFieldOfView = _virtualCamera.m_Lens.FieldOfView;
             _elapsedTime = 0f;
             _isTransitioningFOV = true;
@@ -134,6 +148,9 @@ namespace TC
 
             _MCController.IsUsingDelay = true;
             _lastDoor.open = false;
+            _lastDoor2.open = false;
+
+            _playerStart.transform.position = _newPlayerStartLocation.transform.position;
         }
 
         void OnFinishGame()
@@ -145,7 +162,7 @@ namespace TC
         {
             _inputReader.EnableUIInput();
 
-            _HUD.SetActive(false);
+            _HUD.alpha = 0;
 
             DepthOfField depthOfField;
 
@@ -168,6 +185,11 @@ namespace TC
             yield return new WaitForSeconds(1);
 
             SceneManager.LoadScene(_nextScene);
+        }
+
+        public void OnAlarm()
+        {
+            _MCController.Speed = _MCController.SlowSpeed;
         }
     }
 }

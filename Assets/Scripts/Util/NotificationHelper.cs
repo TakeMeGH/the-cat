@@ -19,6 +19,7 @@ namespace TC
         [SerializeField] BubbleIconEvent _bubbleIconEvent;
         void OnCollisionEnter(Collision other)
         {
+            AudioManager.Instance.PlaySFX(GeneralSFX.IdleMeow);
             if (!DataManager.Instance.IsTowelExist())
             {
                 _activatePointerEvents.RaiseEvent(_towelLocation, _pointerDuration);

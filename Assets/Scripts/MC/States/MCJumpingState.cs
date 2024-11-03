@@ -17,9 +17,9 @@ namespace TC
         {
             _MCController.Animator.Play(ANIMATION_NAME);
             _MCController.InputReader.JumpEvent += OnJump;
-
             _MCController.Rigidbody.velocity = Vector2.zero;
             Jump();
+            AudioManager.Instance.PlaySFX(GeneralSFX.Jumping);
         }
 
         public void Exit()

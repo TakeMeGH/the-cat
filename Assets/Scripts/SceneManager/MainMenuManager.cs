@@ -16,6 +16,7 @@ namespace TC
         void Start()
         {
             _inputReader.EnableUIInput();
+            AudioManager.Instance.PlayBGM(GeneraBGM.MainMenu);
         }
 
         public void OpenSettingsMenu()

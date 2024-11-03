@@ -113,5 +113,10 @@ namespace TC
             CurrentHealth = currentHealth;
             SwitchState(MCDamagedState);
         }
+
+        public void SelfDestroy()
+        {
+            SpriteRenderer.enabled = false;
+        }
     }
 }

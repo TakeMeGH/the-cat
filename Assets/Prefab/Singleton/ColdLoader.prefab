@@ -46,3 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioManager: {fileID: 5156416316269211003, guid: 05548460c2ae0c3468dada0dad8ef074,
     type: 3}
+  _dataManager: {fileID: 5940815416306942826, guid: 34ca136f6afb1e74cb44e6a216c8618e,
+    type: 3}

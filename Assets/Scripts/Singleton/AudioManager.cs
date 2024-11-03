@@ -82,5 +82,78 @@ namespace TC
             _mixer.SetFloat(BGM_VOLUME, Mathf.Log10(volume) * MULTIPILER);
             PlayerPrefs.SetFloat(BGM_VOLUME, volume);
         }
+
+        public void PlayBGM(GeneraBGM bgmType)
+        {
+            StopAllBGM();
+
+            switch (bgmType)
+            {
+                case GeneraBGM.WinningScene:
+                    WinningScene.Play();
+                    break;
+                case GeneraBGM.InGame:
+                    InGame.Play();
+                    break;
+                case GeneraBGM.MainMenu:
+                    MainMenu.Play();
+                    break;
+                case GeneraBGM.NRoom:
+                    NRoom.Play();
+                    break;
+                default:
+                    Debug.LogWarning("Unknown BGM type");
+                    break;
+            }
+        }
+        private void StopAllBGM()
+        {
+            WinningScene.Stop();
+            InGame.Stop();
+            MainMenu.Stop();
+            NRoom.Stop();
+        }
+
+        public void PlaySFX(GeneralSFX sfxType)
+        {
+            switch (sfxType)
+            {
+                case GeneralSFX.Jumping:
+                    Jumping.Play();
+                    break;
+                case GeneralSFX.Walking:
+                    Walking.Play();
+                    break;
+                case GeneralSFX.Dipping:
+                    Dipping.Play();
+                    break;
+                case GeneralSFX.Ded:
+                    Ded.Play();
+                    break;
+                case GeneralSFX.DoorOpen:
+                    DoorOpen.Play();
+                    break;
+                case GeneralSFX.Fire:
+                    Fire.Play();
+                    break;
+                case GeneralSFX.KeyTaken:
+                    KeyTaken.Play();
+                    break;
+                case GeneralSFX.DraggingBox:
+                    DraggingBox.Play();
+                    break;
+                case GeneralSFX.IdleMeow:
+                    IdleMeow.Play();
+                    break;
+                case GeneralSFX.FireHit:
+                    FireHit.Play();
+                    break;
+                default:
+                    Debug.LogWarning("Unknown SFX type");
+                    break;
+            }
+        }
+
+
     }
 }

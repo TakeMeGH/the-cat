@@ -8,6 +8,7 @@ namespace TC
     {
         public void PickUpWater()
         {
+            AudioManager.Instance.PlaySFX(GeneralSFX.Dipping);
             DataManager.Instance.SetWaterExist(true);
         }
     }

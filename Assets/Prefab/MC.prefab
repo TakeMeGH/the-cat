@@ -219,7 +219,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 2.24, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8982305631061016294}
@@ -265,7 +265,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 41d89cd5f4180bf41b790daa8e1d1357, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 718567e1319c14a498ba202ffbf01d95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -518,6 +518,7 @@ GameObject:
   - component: {fileID: 4376485070500834174}
   - component: {fileID: 2089174993933083814}
   - component: {fileID: 4022260459676669135}
+  - component: {fileID: 88650449295111101}
   m_Layer: 10
   m_Name: MC
   m_TagString: Untagged
@@ -688,7 +689,7 @@ MonoBehaviour:
   MaxJumpAmmount: 1
   FallMultiplier: 3
   MaxFallSpeed: -100
-  FallingThreshold: -0.2
+  FallingThreshold: -0.5
   IsUsingDelay: 0
   WalkDelay: 2
   WalkDelayIntervalCompensation: 1
@@ -698,7 +699,7 @@ MonoBehaviour:
   OnRespawnEvent: {fileID: 11400000, guid: d4ff8da7ad4ef3144a5fa9c5aced5f53, type: 2}
   OnGameOverEvent: {fileID: 11400000, guid: 25b4ee5e4b320094c9c550f9237092c6, type: 2}
   FlashMaterial: {fileID: 2100000, guid: bddd263124d76e943b32ca9997eaaf95, type: 2}
-  FlashDuration: 1.5
+  FlashDuration: 2.5
   FlashInterval: 0.125
   CurrentJumpAmount: 0
   CurrentHealth: 0
@@ -723,6 +724,18 @@ MonoBehaviour:
   TriggerOnMovementStateAnimationTransitionEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &88650449295111101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886742055906287827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80a42c44626b844f9f9c8acf38b98ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8943682329582855753
 GameObject:
   m_ObjectHideFlags: 0

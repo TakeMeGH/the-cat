@@ -10,6 +10,7 @@ namespace TC
         public void StoreKey()
         {
             DataManager.Instance.StoreKey(ID);
+            AudioManager.Instance.PlaySFX(GeneralSFX.KeyTaken);
         }
 
         public float floatAmplitude = 0.5f;

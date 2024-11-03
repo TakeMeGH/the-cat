@@ -25,7 +25,7 @@ namespace TC
             _originalMaterial = _MCController.SpriteRenderer.material;
             _currentlyFlashMaterial = false;
             _MCController.Animator.Play(ANIMATION_NAME);
-
+            AudioManager.Instance.PlaySFX(GeneralSFX.FireHit);
             StartFlashing();
         }
 
@@ -38,6 +38,7 @@ namespace TC
             else
             {
                 _MCController.OnGameOverEvent.RaiseEvent();
+                _MCController.SelfDestroy();
             }
         }
 
@@ -68,7 +69,6 @@ namespace TC
 
         private void ToggleFlash()
         {
-            Debug.Log(_currentlyFlashMaterial);
             if (_currentlyFlashMaterial)
             {
                 _currentlyFlashMaterial = !_currentlyFlashMaterial;

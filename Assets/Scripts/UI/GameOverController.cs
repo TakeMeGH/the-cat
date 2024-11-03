@@ -12,6 +12,7 @@ namespace TC
 
         public void OpenGameOver()
         {
+            AudioManager.Instance.PlaySFX(GeneralSFX.Ded);
             _gameOverContainer.SetActive(true);
             DataManager.Instance.ClearData();
             _inputReader.EnableUIInput();
