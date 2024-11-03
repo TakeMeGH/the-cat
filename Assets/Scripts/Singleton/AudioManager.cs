@@ -8,12 +8,24 @@ namespace TC
 
     public enum GeneralSFX
     {
-        ExampleSFX,
+        Jumping,
+        Walking,
+        Dipping,
+        Ded,
+        DoorOpen,
+        Fire,
+        KeyTaken,
+        DraggingBox,
+        IdleMeow,
+        FireHit,
     }
 
     public enum GeneraBGM
     {
-        ExampleBGM,
+        WinningScene,
+        InGame,
+        MainMenu,
+        NRoom,
     }
 
 
@@ -27,13 +39,23 @@ namespace TC
         const float MULTIPILER = 20;
 
         #region SFX
-        [SerializeField] AudioSource _exampleSFX;
-        // here
+        [SerializeField] AudioSource Jumping;
+        [SerializeField] AudioSource Walking;
+        [SerializeField] AudioSource Dipping;
+        [SerializeField] AudioSource Ded;
+        [SerializeField] AudioSource DoorOpen;
+        [SerializeField] AudioSource Fire;
+        [SerializeField] AudioSource KeyTaken;
+        [SerializeField] AudioSource DraggingBox;
+        [SerializeField] AudioSource IdleMeow;
+        [SerializeField] AudioSource FireHit;
         #endregion
 
         #region BGM
-        [SerializeField] AudioSource _exampleBGM;
-        // here
+        [SerializeField] AudioSource WinningScene;
+        [SerializeField] AudioSource InGame;
+        [SerializeField] AudioSource MainMenu;
+        [SerializeField] AudioSource NRoom;
         #endregion
 
         void Start()
