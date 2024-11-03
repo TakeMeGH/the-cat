@@ -1,6 +1,5 @@
 using System.Collections;
 using Cinemachine;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
