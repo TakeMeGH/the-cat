@@ -19,6 +19,7 @@ namespace TC
         public void Enter()
         {
             _MCController.Animator.Play(ANIMATION_NAME);
+            _MCController.Rigidbody.velocity = new Vector3(0, _MCController.Rigidbody.velocity.y, 0);
             _MCController.AnimationEventTrigger.TriggerOnMovementStateAnimationExitEvent.AddListener(OnAnimationEnd);
             _MCController.AnimationEventTrigger.TriggerOnMovementStateAnimationTransitionEvent.AddListener(InteractObject);
         }

@@ -19,13 +19,13 @@ namespace TC
         [SerializeField] BubbleIconEvent _bubbleIconEvent;
         void OnCollisionEnter(Collision other)
         {
-            if (!DataManager.Instance.IsTowelExist)
+            if (!DataManager.Instance.IsTowelExist())
             {
                 _activatePointerEvents.RaiseEvent(_towelLocation, _pointerDuration);
                 _bubbleIconEvent.RaiseEvent(_towelSprite, _bubbleDuration);
 
             }
-            else if (!DataManager.Instance.IsWaterExist)
+            else if (!DataManager.Instance.IsWaterExist())
             {
                 _activatePointerEvents.RaiseEvent(_waterLocation, _pointerDuration);
                 _bubbleIconEvent.RaiseEvent(_waterSprite, _bubbleDuration);

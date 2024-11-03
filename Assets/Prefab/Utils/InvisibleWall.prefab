@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7897409589436788050}
   - component: {fileID: 6450039739201154789}
+  - component: {fileID: 2256636254997332244}
+  - component: {fileID: 7441306957948730626}
   m_Layer: 0
   m_Name: InvisibleWall
   m_TagString: Untagged
@@ -53,3 +55,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2256636254997332244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011025322866177304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4935c059ff408c34991df890791f8d2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _towelLocation: {fileID: 0}
+  _waterLocation: {fileID: 0}
+  _pointerDuration: 10
+  _activatePointerEvents: {fileID: 11400000, guid: f46e3a70dc920534a8661d13fdfa65c6,
+    type: 2}
+  _towelSprite: {fileID: 21300000, guid: 3438e230229dc4546909c04d79679980, type: 3}
+  _waterSprite: {fileID: 21300000, guid: a192d1694a40dae4082699d7cab08b43, type: 3}
+  _bubbleDuration: 10
+  _bubbleIconEvent: {fileID: 11400000, guid: 4573c13e99fb3cf4b9ea28bf39b9aaf1, type: 2}
+--- !u!114 &7441306957948730626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011025322866177304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77264625132a76c41a1da49344d8ba3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _invisibleWall: {fileID: 6450039739201154789}
