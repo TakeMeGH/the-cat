@@ -19,5 +19,10 @@ namespace TC
             return IsKeyExist.Contains(ID);
         }
 
+        public void ClearData()
+        {
+            IsKeyExist.Clear();
+        }
+
     }
 }

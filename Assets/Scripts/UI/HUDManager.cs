@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 namespace TC
@@ -10,9 +8,7 @@ namespace TC
         [SerializeField] List<HPIconManager> HPIconManagers = new List<HPIconManager>();
         [SerializeField] VoidEvent _respawnEvent;
         [SerializeField] VoidEvent _gameOverEvent;
-
         int _lastIndex;
-
         void OnEnable()
         {
             _respawnEvent.EventAction += RemoveOneHP;

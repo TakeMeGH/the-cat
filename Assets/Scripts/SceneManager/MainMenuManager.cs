@@ -24,6 +24,7 @@ namespace TC
             {
                 _selectedMenu = _settingsMenu;
                 _selectedMenu.SetActive(true);
+                _selectedMenu.GetComponent<VolumeSettings>().Setup();
             }
         }
 

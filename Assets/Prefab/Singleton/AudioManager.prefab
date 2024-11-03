@@ -304,3 +304,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8082ab05d0e5894a83d9dbf13eb182e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mixer: {fileID: 24100000, guid: 51b7af32f3ba7df45a73096638b9f498, type: 2}

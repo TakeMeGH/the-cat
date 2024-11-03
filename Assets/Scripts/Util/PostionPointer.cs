@@ -49,7 +49,6 @@ namespace TC
             _target = target;
             _currentTime = Time.time;
             _duration = duration;
-
         }
 
     }
