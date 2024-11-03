@@ -1268,7 +1268,7 @@ RectTransform:
   m_GameObject: {fileID: 702566056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 573924470}
@@ -1278,7 +1278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -267.5}
+  m_AnchoredPosition: {x: 960, y: -395}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &702566058
@@ -1544,7 +1544,7 @@ RectTransform:
   m_GameObject: {fileID: 764003655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1852435572}
@@ -1554,7 +1554,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -172.5}
+  m_AnchoredPosition: {x: 960, y: -215}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764003657
@@ -1822,7 +1822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -125}
+  m_AnchoredPosition: {x: 960, y: -125}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &827696139
@@ -1847,8 +1847,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Master
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff63ce5742e8af74cabe35aecdc64239, type: 2}
+  m_sharedMaterial: {fileID: 4350822522233448616, guid: ff63ce5742e8af74cabe35aecdc64239,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1872,8 +1873,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 62
+  m_fontSizeBase: 62
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1888,7 +1889,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -1956,7 +1957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -315}
+  m_AnchoredPosition: {x: 960, y: -485}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &856427556
@@ -1981,8 +1982,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: SFX
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff63ce5742e8af74cabe35aecdc64239, type: 2}
+  m_sharedMaterial: {fileID: 4350822522233448616, guid: ff63ce5742e8af74cabe35aecdc64239,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2006,8 +2008,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 62
+  m_fontSizeBase: 62
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2022,7 +2024,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -2143,7 +2145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -220}
+  m_AnchoredPosition: {x: 960, y: -305}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1063899258
@@ -2168,8 +2170,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: BGM
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff63ce5742e8af74cabe35aecdc64239, type: 2}
+  m_sharedMaterial: {fileID: 4350822522233448616, guid: ff63ce5742e8af74cabe35aecdc64239,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2193,8 +2196,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 62
+  m_fontSizeBase: 62
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2209,7 +2212,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -2336,55 +2339,67 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Credits
+  m_text: 'Credits to these premade assets (and where we used it):
+
+    [BGM]
+
+    -
+    Main Menu: https://pixabay.com/music/beats-lofi-song-memories-sunbeam-by-lofium-242711/
+
+    -
+    in-game: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300035
+
+    -
+    last room: https://pixabay.com/music/ambient-gloomy-depths-246916/
 
 
-    Concept & Design
+
+    [SFX]
+
+    -
+    fire (use it as Fire object''s SFX): https://pixabay.com/sound-effects/fire-sound-efftect-21991/
+
+    -
+    meow 1 (if cat got affected by fire damage): https://pixabay.com/sound-effects/cat-purring-and-meow-5928/
+
+    -
+    meow 2 (if player''s not moving/idle condition): https://pixabay.com/sound-effects/cat-meow-14536/
+
+    -
+    Open door: https://pixabay.com/sound-effects/door-open-close-45475/
+
+    - dragging
+    box: https://pixabay.com/sound-effects/sand-walk-106366/
+
+    - jump: https://pixabay.com/sound-effects/jumping-on-a-bed-80357/
+
+    -
+    walk (sementara): https://pixabay.com/sound-effects/walking-96582/
+
+    - dip
+    to water: https://pixabay.com/sound-effects/walking-in-water-199418/
+
+    - take
+    the key : https://pixabay.com/sound-effects/coin-c-02-102844/
+
+    - transition
+    to winning condition (habis cutscene): https://pixabay.com/sound-effects/happy-memories-uplifting-pad-sound-21381/
+
+    -
+    transition to losing condition : https://pixabay.com/sound-effects/game-over-arcade-6435/
 
 
-    Alex "Pixel Master"
 
-    Jamie "Game
-    Wizard"
+    [FONTS]
 
-    Programming
+    -
+    titles: https://fonts.google.com/specimen/Luckiest+Guy
 
-
-    Casey "Bug Smasher"
-
-    Morgan "Code Ninja"
-
-    Art
-    & Animation
-
-
-    Taylor "Pixel Painter"
-
-    Riley "Sprite Sorcerer"
-
-    Sound
-    Design
-
-
-    Jordan "Beatsmith"
-
-    Frankie "Sound Alchemist"
-
-    Special Thanks
-
-
-    The
-    Game Jam Crew
-
-    Coffee for endless support
-
-    Our ever-patient friends and
-    family
-
-    Made with Pixel Love in 48 Hours!'
+    - else: https://fonts.google.com/specimen/Montserrat?query=montserrat'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff63ce5742e8af74cabe35aecdc64239, type: 2}
+  m_sharedMaterial: {fileID: 4350822522233448616, guid: ff63ce5742e8af74cabe35aecdc64239,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2408,8 +2423,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2741,7 +2756,7 @@ RectTransform:
   m_GameObject: {fileID: 1238106007}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1630237436}
@@ -2751,7 +2766,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -362.5}
+  m_AnchoredPosition: {x: 960, y: -575}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1238106009
@@ -3601,38 +3616,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'How to Play:
-
-
-    Move Around
-
-
-    Use the arrow keys (or WASD) to move
-    your character around the world. Explore every corner!
-
-    Collect Items
-
-
-    Walk
-    over items to collect them. Some items might be hidden, so keep your eyes open!
-
-    Avoid
-    Enemies
-
-
-    Watch out for enemies! If they touch you, you lose health. Use
-    your quick moves to dodge them!
-
-    Reach the Goal
-
-
-    Find the exit door
-    on each level to move to the next stage. Can you make it to the end?
-
-'
+  m_text: "<b>Tutorial, for you dummies:</b>\r\n\r\n\u2022 <b>Get <u>Out</u> from
+    the house</b>. How?\r\n   \u25CB Find <b>keys</b> around the house\r\n   \u25CB
+    Use <b>wet towel</b> to access some areas\r\n   \u25CB Remember, <i>cats are
+    short</i>. Use <b>boxes</b> provided across the map to reach higher places (tables,
+    doors, etc.).\r\n\r\n\u2022 Let\u2019s be real, <b>HOW?</b>\r\n   \u25CB <b>WASD</b>:
+    Move\r\n   \u25CB <b>Spacebar</b>: Jump\r\n   \u25CB <b>F</b>: Interact\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff63ce5742e8af74cabe35aecdc64239, type: 2}
+  m_sharedMaterial: {fileID: 4350822522233448616, guid: ff63ce5742e8af74cabe35aecdc64239,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4744,8 +4737,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press spacebar to start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6960a3c8f517e9246908877a42b1f865, type: 2}
+  m_sharedMaterial: {fileID: -1478627446181647208, guid: 6960a3c8f517e9246908877a42b1f865,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5027,10 +5021,10 @@ RectTransform:
   - {fileID: 1238106008}
   m_Father: {fileID: 12943529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2036947670
 MonoBehaviour:
@@ -5050,7 +5044,7 @@ MonoBehaviour:
     m_Top: 100
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 12.5
+  m_Spacing: 55
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0

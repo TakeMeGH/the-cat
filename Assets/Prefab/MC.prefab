@@ -689,7 +689,7 @@ MonoBehaviour:
   MaxJumpAmmount: 1
   FallMultiplier: 3
   MaxFallSpeed: -100
-  FallingThreshold: -0.5
+  FallingThreshold: -2
   IsUsingDelay: 0
   WalkDelay: 2
   WalkDelayIntervalCompensation: 1
