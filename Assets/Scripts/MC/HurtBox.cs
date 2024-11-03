@@ -9,7 +9,10 @@ namespace TC
         [SerializeField] HealthController _healthController;
         void OnTriggerEnter(Collider other)
         {
-            _healthController.ReduceHealth();
+            if (other.gameObject.CompareTag("Fire"))
+            {
+                _healthController.ReduceHealth();
+            }
         }
     }
 }
