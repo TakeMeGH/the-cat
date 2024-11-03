@@ -39,7 +39,7 @@ namespace TC
 
         void ShowSprite(Sprite sprite)
         {
-            _bubbleSprite.enabled = true;
+            // _bubbleSprite.enabled = true;
             _iconSprite.enabled = true;
             _iconSprite.sprite = sprite;
             _showing = true;
@@ -49,7 +49,7 @@ namespace TC
         {
             if (!_showing) return;
             _showing = false;
-            _bubbleSprite.enabled = false;
+            // _bubbleSprite.enabled = false;
             _iconSprite.enabled = false;
         }
     }

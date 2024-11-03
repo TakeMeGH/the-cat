@@ -12,6 +12,7 @@ namespace TC
         bool _isTowelExist;
         bool _isWaterExist;
         bool _isRemoveWaterNext;
+        bool _isAlarmPressed;
         public UnityAction OnTowelStatusChange;
         public UnityAction OnWaterStatusChange;
 
@@ -70,6 +71,17 @@ namespace TC
         {
             return _isRemoveWaterNext;
         }
+
+        public void SetAlarmIspressed(bool value)
+        {
+            _isAlarmPressed = value;
+        }
+
+        public bool IsAlarmPressed()
+        {
+            return _isAlarmPressed;
+        }
+
 
 
     }

@@ -7,9 +7,22 @@ namespace TC
     public class VoidEventTrigerer : MonoBehaviour
     {
         [SerializeField] VoidEvent _event;
+        public bool IsOnFinishGame = false;
+
         private void OnTriggerEnter(Collider other)
         {
-            _event.RaiseEvent();
+            if (IsOnFinishGame)
+            {
+                if (DataManager.Instance.IsAlarmPressed())
+                {
+                    _event.RaiseEvent();
+                }
+            }
+            else
+            {
+                _event.RaiseEvent();
+
+            }
         }
     }
 }

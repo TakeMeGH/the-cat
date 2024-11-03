@@ -72,8 +72,8 @@ MonoBehaviour:
   _pointerDuration: 10
   _activatePointerEvents: {fileID: 11400000, guid: f46e3a70dc920534a8661d13fdfa65c6,
     type: 2}
-  _towelSprite: {fileID: 21300000, guid: 3438e230229dc4546909c04d79679980, type: 3}
-  _waterSprite: {fileID: 21300000, guid: a192d1694a40dae4082699d7cab08b43, type: 3}
+  _towelSprite: {fileID: 21300000, guid: 98c6767e0c35f784cacc0584716681ff, type: 3}
+  _waterSprite: {fileID: 21300000, guid: 718567e1319c14a498ba202ffbf01d95, type: 3}
   _bubbleDuration: 10
   _bubbleIconEvent: {fileID: 11400000, guid: 4573c13e99fb3cf4b9ea28bf39b9aaf1, type: 2}
 --- !u!114 &7441306957948730626
