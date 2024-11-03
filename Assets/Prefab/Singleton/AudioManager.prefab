@@ -172,7 +172,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2415283939109378112, guid: 51b7af32f3ba7df45a73096638b9f498,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 7fc9d5ad5baa0c74da994b1319607089, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b96902c923ae67b47b7b50ed17b01acc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -563,7 +563,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2415283939109378112, guid: 51b7af32f3ba7df45a73096638b9f498,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: c52fe93cd7594a04c9f9c00bae198222, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3553e41126ed1654d8492e766dbcd0f4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1093,8 +1093,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mixer: {fileID: 24100000, guid: 51b7af32f3ba7df45a73096638b9f498, type: 2}
-  _exampleSFX: {fileID: 0}
-  _exampleBGM: {fileID: 0}
+  Jumping: {fileID: 3432919908800280980}
+  Walking: {fileID: 730796617546487912}
+  Dipping: {fileID: 8249552909793264844}
+  Ded: {fileID: 9165289957477906548}
+  DoorOpen: {fileID: 3737160639017801394}
+  Fire: {fileID: 9198285426830588414}
+  KeyTaken: {fileID: 5585814151326565753}
+  DraggingBox: {fileID: 1727602601393795047}
+  IdleMeow: {fileID: 2650123711781701116}
+  FireHit: {fileID: 1219213493787300857}
+  WinningScene: {fileID: 1333080778022511542}
+  InGame: {fileID: 8778753126780028083}
+  MainMenu: {fileID: 3069325013836470361}
+  NRoom: {fileID: 7403955660288318313}
 --- !u!1 &5625156001942992046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,7 +1795,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2415283939109378112, guid: 51b7af32f3ba7df45a73096638b9f498,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: fa3d95ca19db51145a4dfdc1799d3729, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3038242577b9bfb44a4c8776739c3851, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2041,7 +2053,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2415283939109378112, guid: 51b7af32f3ba7df45a73096638b9f498,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 4776520cd2852c64c92ebbf9b28b7d08, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4266287364fe62545823fdf0120ad45f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
