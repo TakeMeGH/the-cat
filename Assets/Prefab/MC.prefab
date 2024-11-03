@@ -53,8 +53,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 1, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.85, y: 13.31, z: 0.2}
+  m_Center: {x: -1.2, y: 0, z: 0}
 --- !u!114 &7124186678967470153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,9 +68,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 9
-  OnRespawnEvent: {fileID: 11400000, guid: d4ff8da7ad4ef3144a5fa9c5aced5f53, type: 2}
-  OnGameOverEvent: {fileID: 11400000, guid: 25b4ee5e4b320094c9c550f9237092c6, type: 2}
   _invulnerableTime: 1
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2089174993933083814}
+        m_TargetAssemblyTypeName: TC.MCController, Assembly-CSharp
+        m_MethodName: OnPlayerDamaged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4814364574180305118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +150,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 20.31, y: 16.39, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7534680196773881787
 MonoBehaviour:
@@ -232,8 +245,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.125, z: 1}
-  m_Center: {x: 0, y: -0.45, z: 0}
+  m_Size: {x: 10.09, y: 1, z: 1}
+  m_Center: {x: 0, y: -6.32, z: 0}
 --- !u!54 &8872981712568020469
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -305,7 +318,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.23, y: 0.72, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6090864544437940394}
@@ -355,7 +368,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 993674889, guid: d2acf6a8b6afeb44c9e26d4f6efc9438, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 83e03a46b7ea69543b89de25da20116a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -412,7 +425,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.34
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: -0.01, z: 0}
@@ -426,7 +439,7 @@ Animator:
   m_GameObject: {fileID: 7886742055906287827}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 89f49ef692d4d3240ac9e1995f2f4d8b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2874cb6a9442f2e4f8a4b3ce79194c51, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -460,7 +473,13 @@ MonoBehaviour:
   GroundDetector: {fileID: 5414292704695607668}
   AnimationEventTrigger: {fileID: 4022260459676669135}
   InteractionManager: {fileID: 7534680196773881787}
+  OnRespawnEvent: {fileID: 11400000, guid: d4ff8da7ad4ef3144a5fa9c5aced5f53, type: 2}
+  OnGameOverEvent: {fileID: 11400000, guid: 25b4ee5e4b320094c9c550f9237092c6, type: 2}
+  FlashMaterial: {fileID: 2100000, guid: bddd263124d76e943b32ca9997eaaf95, type: 2}
+  FlashDuration: 1.5
+  FlashInterval: 0.125
   CurrentJumpAmount: 0
+  CurrentHealth: 0
 --- !u!114 &4022260459676669135
 MonoBehaviour:
   m_ObjectHideFlags: 0

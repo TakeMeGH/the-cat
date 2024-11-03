@@ -1,14 +1,14 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace TC
 {
     public class HealthController : MonoBehaviour
     {
         [SerializeField] int _maxHealth;
-        [SerializeField] VoidEvent OnRespawnEvent;
-        [SerializeField] VoidEvent OnGameOverEvent;
         [SerializeField] float _invulnerableTime;
+        public UnityEvent<int> OnDamaged;
         float _hitTime;
         int _currentHealth;
         void Start()
@@ -24,14 +24,15 @@ namespace TC
             }
             _hitTime = Time.time;
             _currentHealth--;
-            if (_currentHealth > 0)
-            {
-                OnRespawnEvent.RaiseEvent();
-            }
-            else
-            {
-                OnGameOverEvent.RaiseEvent();
-            }
+            OnDamaged?.Invoke(_currentHealth);
+            // if (_currentHealth > 0)
+            // {
+            //     OnRespawnEvent.RaiseEvent();
+            // }
+            // else
+            // {
+            //     OnGameOverEvent.RaiseEvent();
+            // }
         }
     }
 }

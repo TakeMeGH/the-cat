@@ -25,10 +25,19 @@ namespace TC
         public Animator Animator { get; private set; }
         public SpriteRenderer SpriteRenderer { get; private set; }
         #endregion
+        [field: Header("Event")]
+        [field: SerializeField] public VoidEvent OnRespawnEvent;
+        [field: SerializeField] public VoidEvent OnGameOverEvent;
+
+        [field: Header("Flash Damaged")]
+        [field: SerializeField] public Material FlashMaterial;
+        [field: SerializeField] public float FlashDuration;
+        [field: SerializeField] public float FlashInterval;
         #region SharedData
         [field: Header("Read Only")]
         public int CurrentJumpAmount;
         public Vector2 MoveDirection { get; private set; }
+        public int CurrentHealth;
         #endregion
 
         #region State
@@ -37,6 +46,7 @@ namespace TC
         public MCJumpingState MCJumpingState { get; private set; }
         public MCFallingState MCFallingState { get; private set; }
         public MCInteractingState MCInteractingState { get; private set; }
+        public MCDamagedState MCDamagedState { get; private set; }
 
         #endregion
 
@@ -62,7 +72,7 @@ namespace TC
             MCJumpingState = new MCJumpingState(this);
             MCFallingState = new MCFallingState(this);
             MCInteractingState = new MCInteractingState(this);
-
+            MCDamagedState = new MCDamagedState(this);
         }
         void Start()
         {
@@ -90,6 +100,12 @@ namespace TC
         {
             MoveDirection = pos.normalized;
 
+        }
+
+        public void OnPlayerDamaged(int currentHealth)
+        {
+            CurrentHealth = currentHealth;
+            SwitchState(MCDamagedState);
         }
     }
 }
