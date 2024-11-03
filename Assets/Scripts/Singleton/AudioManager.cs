@@ -5,14 +5,36 @@ using UnityEngine.Audio;
 
 namespace TC
 {
+
+    public enum GeneralSFX
+    {
+        ExampleSFX,
+    }
+
+    public enum GeneraBGM
+    {
+        ExampleBGM,
+    }
+
+
     public class AudioManager : Singleton<AudioManager>
     {
+
         [SerializeField] AudioMixer _mixer;
         const string MASTER_VOLUME = "MasterVolume";
         const string SFX_VOLUME = "SFXVolume";
         const string BGM_VOLUME = "BGMVolume";
         const float MULTIPILER = 20;
 
+        #region SFX
+        [SerializeField] AudioSource _exampleSFX;
+        // here
+        #endregion
+
+        #region BGM
+        [SerializeField] AudioSource _exampleBGM;
+        // here
+        #endregion
 
         void Start()
         {
